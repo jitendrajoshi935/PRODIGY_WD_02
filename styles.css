@@ -1,0 +1,93 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(127deg, #bcc86d, #87ddee);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.stopwatch {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    border: 2px solid #ddd;
+}
+
+.display {
+    font-size: 3em;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #333;
+    color: #fff;
+    border-radius: 8px;
+    border: 2px solid #444;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    background: #554f4f;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+button:active {
+    background: #004494;
+    transform: scale(1);
+}
+
+.lap-list {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.lap-list div {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    background: #cd4949;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+    .controls {
+        flex-direction: row;
+    }
+    
+    button {
+        width: auto;
+    }
+}
+
+@media (max-width: 400px) {
+    .display {
+        font-size: 2em;
+    }
+    
+    button {
+        font-size: 1em;
+    }
+}
